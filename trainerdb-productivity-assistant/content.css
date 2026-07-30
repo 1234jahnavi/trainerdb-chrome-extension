@@ -1,0 +1,222 @@
+/* ===================================
+   Floating Assistant Button
+=================================== */
+
+#trainerdb-assistant-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+#trainerdb-assistant-btn:hover {
+    transform: scale(1.08);
+    background: #1d4ed8;
+}
+
+/* ===================================
+   Sidebar
+=================================== */
+
+#trainerdb-sidebar {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 340px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -6px 0 20px rgba(0,0,0,0.25);
+    transition: right 0.35s ease;
+    z-index: 999998;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+#trainerdb-sidebar.open {
+    right: 0;
+}
+
+/* ===================================
+   Header
+=================================== */
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2563eb;
+    color: white;
+    padding: 18px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#closeSidebar {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ===================================
+   Sidebar Content
+=================================== */
+
+.sidebar-content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+}
+
+/* ===================================
+   Notes
+=================================== */
+
+#trainerdb-notes {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    resize: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+/* ===================================
+   Tool Buttons
+=================================== */
+
+.tool-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #f4f4f4;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.tool-btn:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Divider
+=================================== */
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 8px 0;
+}
+
+/* ===================================
+   Scrollbar
+=================================== */
+
+#trainerdb-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+#trainerdb-sidebar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+#trainerdb-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* ===================================
+   Dark Mode
+=================================== */
+
+body.trainerdb-dark-mode {
+    background: #1f1f1f !important;
+    color: #ffffff !important;
+}
+
+body.trainerdb-dark-mode * {
+    color: #ffffff !important;
+}
+
+body.trainerdb-dark-mode a {
+    color: #66b3ff !important;
+}
+
+body.trainerdb-dark-mode input,
+body.trainerdb-dark-mode textarea,
+body.trainerdb-dark-mode select {
+    background: #2d2d2d !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.trainerdb-dark-mode button {
+    color: white !important;
+}
+
+body.trainerdb-dark-mode table,
+body.trainerdb-dark-mode th,
+body.trainerdb-dark-mode td {
+    background: #2a2a2a !important;
+    color: white !important;
+}
+
+body.trainerdb-dark-mode .tool-btn {
+    background: #333 !important;
+}
+
+body.trainerdb-dark-mode .tool-btn:hover {
+    background: #2563eb !important;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media (max-width: 768px) {
+
+    #trainerdb-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    #trainerdb-sidebar.open {
+        right: 0;
+    }
+
+    #trainerdb-assistant-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+}

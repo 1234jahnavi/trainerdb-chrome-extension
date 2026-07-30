@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+
+  "name": "TrainerDB Productivity Assistant",
+
+  "description": "Boost productivity on TrainerDB with notes, bookmarks, quick navigation and useful tools.",
+
+  "version": "1.0",
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://trainerdb.com/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TrainerDB Assistant"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://trainerdb.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
